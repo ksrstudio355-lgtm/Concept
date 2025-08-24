@@ -1,0 +1,50 @@
+{
+  "Phase 1 - Prototype (10-15 people)": {
+    "Core Team": [
+      "Game Director",
+      "Technical Director",
+      "Art Director"
+    ],
+    "Programmers": [
+      "Lead Programmer",
+      "Gameplay Programmer",
+      "AI Specialist",
+      "Blockchain Developer"
+    ],
+    "Design": [
+      "Game Designer",
+      "UI/UX Designer"
+    ],
+    "Art": [
+      "Concept Artist",
+      "3D Artist"
+    ],
+    "Other": [
+      "Producer",
+      "QA Lead"
+    ]
+  },
+  "Phase 2 - Production (40-60 people)": {
+    "Programming": [
+      "8-12 Engineers"
+    ],
+    "Design": [
+      "4-6 Designers"
+    ],
+    "Art": [
+      "12-18 Artists"
+    ],
+    "Audio": [
+      "2-3 Sound Designers"
+    ],
+    "QA": [
+      "6-10 Testers"
+    ],
+    "Production": [
+      "3-4 Producers"
+    ],
+    "Community": [
+      "2-3 Community Managers"
+    ]
+  }
+}

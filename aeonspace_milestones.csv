@@ -1,0 +1,25 @@
+Phase,Month,Milestone,Deliverable,Team_Size
+Initiation,1,Project Kickoff,Project Charter,5
+Initiation,2,Team Assembly,Core Team Hired,8
+Initiation,3,Funding Secured,Series A Complete,10
+Conception,4,Game Vision,High-Level GDD,12
+Conception,5,Technical Design,Architecture Document,15
+Conception,6,Art Direction,Style Guide,15
+Conception,7,AI System Design,AI Specification,15
+Prototyping,8,Core Loop Prototype,Playable Demo,18
+Prototyping,10,AI Crafting Demo,AI Validation System,20
+Prototyping,12,Blockchain Integration,NFT Minting System,22
+Prototyping,13,Multiplayer Test,50-Player Server,25
+Pre-Production,15,Vertical Slice,15-Minute Gameplay,30
+Pre-Production,17,Art Pipeline,Asset Production Tools,35
+Pre-Production,19,Economy Design,Tokenomics Model,40
+Pre-Production,21,Production Ready,Full Pipeline,45
+Production,27,Alpha Milestone,Core Features Complete,55
+Production,33,Beta Milestone,Feature Complete,60
+Production,39,Content Complete,All Ages Implemented,60
+Testing,42,Alpha Launch,Closed Alpha Build,50
+Testing,45,Beta Launch,Open Beta Build,45
+Testing,48,Release Candidate,Gold Master,40
+Launch,49,Game Launch,1.0 Release,35
+Post-Launch,52,First Major Update,New Age Content,30
+Post-Launch,60,Year One Complete,Expansion Pack,25

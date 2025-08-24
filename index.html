@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AeonSpace: Echoes of Imagination - Interactive Demo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-bar">
+        <div class="nav-logo">
+            <h2>🚀 AeonSpace</h2>
+        </div>
+        <div class="nav-links">
+            <button class="nav-btn active" data-section="landing">Home</button>
+            <button class="nav-btn" data-section="timeline">Timeline</button>
+            <button class="nav-btn" data-section="crafting">Crafting</button>
+            <button class="nav-btn" data-section="registry">Patent Registry</button>
+            <button class="nav-btn" data-section="marketplace">Marketplace</button>
+        </div>
+    </nav>
+
+    <!-- Landing Section -->
+    <section id="landing" class="section active">
+        <div class="container">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1>AeonSpace: Echoes of Imagination</h1>
+                    <p class="tagline">"From Stone to Stars — History is Yours to Write."</p>
+                    <p class="description">A persistent sandbox universe where players discover, invent, and evolve civilization from scratch. Every invention is player-driven, AI-validated, and permanently stored on blockchain.</p>
+                    <div class="hero-features">
+                        <div class="feature-card">
+                            <span class="feature-icon">🔬</span>
+                            <h3>AI-Validated Crafting</h3>
+                            <p>Combine any materials - AI determines if your invention is scientifically feasible</p>
+                        </div>
+                        <div class="feature-card">
+                            <span class="feature-icon">⛓️</span>
+                            <h3>Blockchain Patents</h3>
+                            <p>Every successful invention is permanently recorded with ownership and authenticity</p>
+                        </div>
+                        <div class="feature-card">
+                            <span class="feature-icon">🌍</span>
+                            <h3>Dynamic Evolution</h3>
+                            <p>Civilization evolves differently each time based on player discoveries</p>
+                        </div>
+                    </div>
+                    <button class="btn btn--primary" onclick="showSection('timeline')">Start Your Journey</button>
+                </div>
+                <div class="hero-image">
+                    <img src="https://user-gen-media-assets.s3.amazonaws.com/gpt4o_images/72417422-ecc1-45ae-8f2b-09e5d07eaa51.png" alt="Stone Age civilization beginnings">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section id="timeline" class="section">
+        <div class="container">
+            <h2>Civilization Timeline</h2>
+            <p class="section-description">Explore humanity's journey through the ages. Click on each era to see the inventions that shaped our world.</p>
+            
+            <div class="timeline-container">
+                <div class="timeline-track"></div>
+                <div class="timeline-ages" id="timeline-ages">
+                    <!-- Ages will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <div class="age-details" id="age-details">
+                <div class="age-content">
+                    <h3 id="age-title">Select an Age</h3>
+                    <p id="age-description">Click on an age above to explore its inventions and resources.</p>
+                    <div class="age-inventions">
+                        <h4>Key Inventions:</h4>
+                        <div id="age-inventions-list" class="inventions-grid"></div>
+                    </div>
+                    <div class="age-resources">
+                        <h4>Available Resources:</h4>
+                        <div id="age-resources-list" class="resources-grid"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Crafting Section -->
+    <section id="crafting" class="section">
+        <div class="container">
+            <h2>AI Crafting Simulator</h2>
+            <p class="section-description">Drag materials from the inventory to the crafting area. The AI will validate if your combination can create something new!</p>
+            
+            <div class="crafting-layout">
+                <div class="materials-inventory">
+                    <h3>Materials Inventory</h3>
+                    <div class="inventory-grid" id="materials-grid">
+                        <!-- Materials will be populated by JavaScript -->
+                    </div>
+                </div>
+
+                <div class="crafting-workspace">
+                    <h3>Crafting Workspace</h3>
+                    <div class="crafting-area" id="crafting-area">
+                        <div class="drop-zone" ondrop="dropMaterial(event)" ondragover="allowDrop(event)">
+                            <p>Drag materials here to craft</p>
+                        </div>
+                    </div>
+                    <button class="btn btn--primary" id="craft-button" onclick="attemptCraft()" disabled>Attempt Craft</button>
+                    <div class="craft-result" id="craft-result"></div>
+                </div>
+
+                <div class="ai-assistant">
+                    <h3>🤖 AI Assistant</h3>
+                    <div class="ai-messages" id="ai-messages">
+                        <div class="ai-message">
+                            <p>Welcome! I'm here to help validate your inventions. Try combining materials to see what you can create!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Patent Registry Section -->
+    <section id="registry" class="section">
+        <div class="container">
+            <h2>Blockchain Patent Registry</h2>
+            <p class="section-description">Every successful invention is permanently recorded on the blockchain with complete ownership and transaction history.</p>
+            
+            <div class="registry-stats">
+                <div class="stat-card">
+                    <span class="stat-number">1,247</span>
+                    <span class="stat-label">Total Patents</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">89</span>
+                    <span class="stat-label">Active Inventors</span>
+                </div>
+                <div class="stat-card">
+                    <span class="stat-number">15,789</span>
+                    <span class="stat-label">Blockchain Transactions</span>
+                </div>
+            </div>
+
+            <div class="patents-list" id="patents-list">
+                <!-- Patents will be populated by JavaScript -->
+            </div>
+
+            <div class="blockchain-history">
+                <h3>Recent Blockchain Transactions</h3>
+                <div class="transactions-list" id="transactions-list">
+                    <!-- Transactions will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Marketplace Section -->
+    <section id="marketplace" class="section">
+        <div class="container">
+            <h2>Economic Trading Marketplace</h2>
+            <p class="section-description">Buy and sell inventions, blueprints, and resources in our player-driven economy.</p>
+            
+            <div class="marketplace-filters">
+                <div class="filter-group">
+                    <label>Category:</label>
+                    <select id="category-filter" onchange="filterMarketplace()">
+                        <option value="all">All Items</option>
+                        <option value="tools">Tools</option>
+                        <option value="blueprints">Blueprints</option>
+                        <option value="resources">Resources</option>
+                    </select>
+                </div>
+                <div class="filter-group">
+                    <label>Sort by:</label>
+                    <select id="sort-filter" onchange="filterMarketplace()">
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="newest">Newest First</option>
+                        <option value="popular">Most Popular</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="marketplace-grid" id="marketplace-grid">
+                <!-- Market items will be populated by JavaScript -->
+            </div>
+
+            <div class="trading-activity">
+                <h3>Recent Trading Activity</h3>
+                <div class="activity-feed" id="activity-feed">
+                    <div class="activity-item">
+                        <span class="activity-icon">🔥</span>
+                        <p><strong>Player_042</strong> sold <em>Bronze Sword</em> for <strong>2,500 credits</strong></p>
+                        <span class="activity-time">2 minutes ago</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-icon">⚡</span>
+                        <p><strong>Player_137</strong> licensed <em>Steam Engine</em> blueprint to <strong>Industrial Corp</strong></p>
+                        <span class="activity-time">15 minutes ago</span>
+                    </div>
+                    <div class="activity-item">
+                        <span class="activity-icon">🛠️</span>
+                        <p><strong>Player_001</strong> patented the <em>Wheel</em> invention</p>
+                        <span class="activity-time">1 hour ago</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Loading overlay -->
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loading-spinner"></div>
+        <p>Processing invention...</p>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
